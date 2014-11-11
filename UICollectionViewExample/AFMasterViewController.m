@@ -42,9 +42,14 @@ static NSString *CellIdentifier = @"AFCollectionViewCell";
     
  
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
-    flow.itemSize = CGSizeMake((self.view.frame.size.width - 2*d)/(d), (self.view.frame.size.width - 2*d)/(d));
+    
+    CGFloat width = (self.view.frame.size.width - 2*d)/(d);
+    CGFloat height = width;
+    
+    flow.itemSize = CGSizeMake((width > 20)?width:20, (height > 20)?height:20);
+//    flow.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     flow.minimumInteritemSpacing = 1;
-    flow.minimumLineSpacing = 1;
+    flow.minimumLineSpacing = 2;
     self.collectionView.collectionViewLayout = flow;
     
     
