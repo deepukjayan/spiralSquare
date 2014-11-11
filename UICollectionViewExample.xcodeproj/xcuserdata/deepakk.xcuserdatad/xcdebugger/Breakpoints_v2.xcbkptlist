@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UICollectionViewExample/AFMasterViewController.m"
-            timestampString = "437041280.771683"
+            timestampString = "437397505.991354"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "-addValueAndReloadCollection"
             landmarkType = "5">
          </BreakpointContent>

@@ -40,6 +40,14 @@ static NSString *CellIdentifier = @"AFCollectionViewCell";
     
     self.title = @"Spiral Square";
     
+ 
+    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+    flow.itemSize = CGSizeMake((self.view.frame.size.width - 2*d)/(d), (self.view.frame.size.width - 2*d)/(d));
+    flow.minimumInteritemSpacing = 1;
+    flow.minimumLineSpacing = 1;
+    self.collectionView.collectionViewLayout = flow;
+    
+    
     valueArray = [[NSMutableArray alloc]initWithCapacity:(d*d)];
     indexArray = [[NSMutableArray alloc]init];
     finalArray = [[NSMutableArray alloc]init];
@@ -209,9 +217,13 @@ static NSString *CellIdentifier = @"AFCollectionViewCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     AFCollectionViewCell *cell = (AFCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    
     [cell setTitle:[finalArray objectAtIndex:indexPath.section * d + indexPath.row]];
     return cell;
 }
-
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionView *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 1;
+}
 
 @end

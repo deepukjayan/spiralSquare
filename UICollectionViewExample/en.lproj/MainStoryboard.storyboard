@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" promptedForUpgradeToXcode5="NO" initialViewController="QU1-WY-NEV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="QU1-WY-NEV">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Dimension View Controller-->
@@ -57,6 +56,7 @@
         <!--Master View Controller-->
         <scene sceneID="WAK-cx-NDi">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BaG-Eq-ue9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="1Uv-pY-glg" customClass="AFMasterViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="xGG-2t-vJr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
@@ -74,11 +74,11 @@
                                 <rect key="frame" x="10" y="10" width="145" height="145"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="49" height="54"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbn-7f-CNj">
-                                            <rect key="frame" x="-6" y="18" width="59" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04K-jp-mCN">
+                                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -88,13 +88,14 @@
                                 </view>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailingMargin" secondItem="Gbn-7f-CNj" secondAttribute="trailing" constant="-12" id="IHH-So-DZv"/>
-                                    <constraint firstItem="Gbn-7f-CNj" firstAttribute="top" secondItem="Yyv-kJ-4RV" secondAttribute="topMargin" constant="10" id="KXw-XK-nrv"/>
-                                    <constraint firstItem="Gbn-7f-CNj" firstAttribute="leading" secondItem="Yyv-kJ-4RV" secondAttribute="leadingMargin" constant="-14" id="guY-5B-tOf"/>
+                                    <constraint firstAttribute="trailing" secondItem="04K-jp-mCN" secondAttribute="trailing" id="2zJ-WI-pVq"/>
+                                    <constraint firstItem="04K-jp-mCN" firstAttribute="top" secondItem="Yyv-kJ-4RV" secondAttribute="top" id="4Eb-DZ-UqK"/>
+                                    <constraint firstItem="04K-jp-mCN" firstAttribute="leading" secondItem="Yyv-kJ-4RV" secondAttribute="leading" id="RZ2-kn-TF1"/>
+                                    <constraint firstAttribute="bottom" secondItem="04K-jp-mCN" secondAttribute="bottom" id="TTo-6l-8rH"/>
                                 </constraints>
+                                <size key="customSize" width="30" height="30"/>
                                 <connections>
-                                    <outlet property="title" destination="Gbn-7f-CNj" id="3O6-TT-GJE"/>
-                                    <outlet property="titleLabel" destination="Gbn-7f-CNj" id="pXE-oW-vJ6"/>
+                                    <outlet property="titleLabel" destination="04K-jp-mCN" id="lsQ-Vy-QvY"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -106,7 +107,6 @@
                     <navigationItem key="navigationItem" id="5k8-ri-1gN"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BaG-Eq-ue9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="473" y="18"/>
         </scene>
